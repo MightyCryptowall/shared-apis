@@ -6,7 +6,7 @@ import { createWrapper } from './utils'
 import useGetAllPostQuery from '../queries/useGetAllPostQuery'
 
 describe('query hook', () => {
-    test('successful query hook', async () => {
+    test('successful get all post query hook', async () => {
         const { result } = renderHook(() => useGetAllPostQuery(), {
             wrapper: createWrapper()
         })
@@ -15,5 +15,6 @@ describe('query hook', () => {
         await waitFor(() => expect(result.current.isSuccess).toBe(true))
 
         expect(result?.current?.data ? result?.current?.data[result?.current?.data.length -1].id : 0).toBe(1)
+        expect(result?.current?.data ? result?.current?.data[result?.current?.data.length -1].name : "").toBe("Banana City")
     })
 })
