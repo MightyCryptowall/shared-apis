@@ -15,5 +15,5 @@ const useGetAllPostQuery= () => {
     refetchOnMount: false,
   });
 }
- 
+
 export default useGetAllPostQuery;
