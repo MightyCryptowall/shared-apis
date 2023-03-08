@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { get_all_posts } from "../apis/posts";
 
 const useGetAllPostQuery= () => {
-  // console.log("remount primary timeline")
+
   return useQuery({
     queryKey: ["get-all-posts"],
     queryFn: get_all_posts,
